@@ -1,0 +1,1422 @@
+<!DOCTYPE html>
+<html lang="mr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>राऊतांचा राजा | गणपती उत्सव २०२६</title>
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+
+            font-family:
+                "Noto Serif Devanagari",
+                "Mangal",
+                serif;
+
+            background:
+                radial-gradient(circle at top,
+                    #fff4d6,
+                    #f6d79b,
+                    #a94b20);
+
+            color: #5b1c0b;
+
+            min-height: 100vh;
+
+            overflow-x: hidden;
+        }
+
+
+        /* =========================
+           WELCOME SCREEN
+        ========================= */
+
+        #welcomeScreen {
+
+            position: fixed;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100vh;
+
+            background:
+                radial-gradient(circle,
+                    #9d3d16,
+                    #681207,
+                    #350804);
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+            color: #fff8e6;
+
+            z-index: 9999;
+
+            padding: 25px;
+
+            transition:
+                opacity 1s ease,
+                visibility 1s ease;
+        }
+
+
+        #welcomeScreen.hide {
+
+            opacity: 0;
+
+            visibility: hidden;
+        }
+
+
+        .welcome-om {
+
+            font-size: 85px;
+
+            color: #ffd978;
+
+            margin-bottom: 10px;
+
+            animation: glow 2s infinite alternate;
+        }
+
+
+        @keyframes glow {
+
+            from {
+
+                text-shadow:
+                    0 0 5px #ffd978;
+            }
+
+            to {
+
+                text-shadow:
+                    0 0 20px #ffd978,
+                    0 0 40px #ffb300;
+            }
+        }
+
+
+        .welcome-small {
+
+            font-size: 19px;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .welcome-title {
+
+            font-size: 50px;
+
+            color: #ffd978;
+
+            margin-bottom: 5px;
+
+            text-shadow:
+                2px 3px 5px #000;
+        }
+
+
+        .welcome-subtitle {
+
+            font-size: 25px;
+
+            margin-bottom: 35px;
+        }
+
+
+        .enter-button {
+
+            background:
+                linear-gradient(135deg,
+                    #ffd978,
+                    #e8a92e);
+
+            color: #641306;
+
+            border: 2px solid #fff1b5;
+
+            padding: 15px 40px;
+
+            border-radius: 50px;
+
+            font-size: 21px;
+
+            font-family: inherit;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            box-shadow:
+                0 7px 25px rgba(0, 0, 0, 0.4);
+
+            transition: 0.3s;
+        }
+
+
+        .enter-button:hover {
+
+            transform: scale(1.08);
+        }
+
+
+        /* =========================
+           MAIN PAGE
+        ========================= */
+
+        .page {
+
+            padding: 25px 10px 50px;
+        }
+
+
+        /* =========================
+           CARD
+        ========================= */
+
+        .card {
+
+            width: 95%;
+
+            max-width: 700px;
+
+            margin: auto;
+
+            background:
+                linear-gradient(145deg,
+                    #fffdf4,
+                    #fff0cb);
+
+            border: 8px double #b8860b;
+
+            border-radius: 28px;
+
+            box-shadow:
+                0 15px 50px rgba(0, 0, 0, 0.35);
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+
+        /* =========================
+           DECORATION
+        ========================= */
+
+        .corner {
+
+            position: absolute;
+
+            font-size: 45px;
+
+            z-index: 3;
+        }
+
+
+        .top-left {
+
+            top: 8px;
+            left: 12px;
+        }
+
+
+        .top-right {
+
+            top: 8px;
+            right: 12px;
+        }
+
+
+        .bottom-left {
+
+            bottom: 8px;
+            left: 12px;
+        }
+
+
+        .bottom-right {
+
+            bottom: 8px;
+            right: 12px;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        .header {
+
+            text-align: center;
+
+            padding:
+                35px 20px 10px;
+        }
+
+
+        .om {
+
+            font-size: 45px;
+
+            color: #b71c1c;
+
+            animation:
+                glowRed 2s infinite alternate;
+        }
+
+
+        @keyframes glowRed {
+
+            from {
+
+                text-shadow:
+                    0 0 4px #ffcc66;
+            }
+
+            to {
+
+                text-shadow:
+                    0 0 15px #ff9800,
+                    0 0 25px #ffd54f;
+            }
+        }
+
+
+        .small-title {
+
+            font-size: 17px;
+
+            color: #805019;
+
+            margin-top: 5px;
+        }
+
+
+        .main-title {
+
+            font-size: 45px;
+
+            font-weight: bold;
+
+            color: #a51c10;
+
+            margin-top: 5px;
+
+            text-shadow:
+                1px 2px 2px #d6a54b;
+        }
+
+
+        .subtitle {
+
+            font-size: 23px;
+
+            color: #7b341e;
+
+            margin-top: 3px;
+        }
+
+
+        /* =========================
+           GANPATI IMAGE
+        ========================= */
+
+        .ganpati-photo {
+
+            width: 90%;
+
+            max-width: 500px;
+
+            margin:
+                15px auto 20px;
+
+            border-radius: 25px;
+
+            overflow: hidden;
+
+            border:
+                5px solid #c49125;
+
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.3);
+
+            background: white;
+        }
+
+
+        .ganpati-photo img {
+
+            width: 100%;
+
+            height: auto;
+
+            display: block;
+        }
+
+
+        /* =========================
+           DIVIDER
+        ========================= */
+
+        .divider {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 10px;
+
+            margin:
+                15px 30px;
+
+            color: #b8860b;
+
+            font-size: 22px;
+        }
+
+
+        .divider::before,
+        .divider::after {
+
+            content: "";
+
+            height: 2px;
+
+            background:
+                linear-gradient(to right,
+                    transparent,
+                    #b8860b);
+
+            flex: 1;
+        }
+
+
+        /* =========================
+           INVITATION
+        ========================= */
+
+        .invitation {
+
+            text-align: center;
+
+            padding:
+                10px 35px;
+        }
+
+
+        .invitation h2 {
+
+            color: #a51c10;
+
+            font-size: 30px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .invitation p {
+
+            font-size: 19px;
+
+            line-height: 1.9;
+        }
+
+
+        .highlight {
+
+            color: #b51e12;
+
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           FESTIVAL BOX
+        ========================= */
+
+        .festival-box {
+
+            margin:
+                25px 35px;
+
+            padding: 22px;
+
+            border:
+                2px solid #c49228;
+
+            border-radius: 20px;
+
+            background:
+                rgba(255, 255, 255, 0.65);
+
+            text-align: center;
+
+            box-shadow:
+                inset 0 0 20px rgba(190, 140, 30, 0.12);
+        }
+
+
+        .festival-box h3 {
+
+            color: #a51c10;
+
+            font-size: 28px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .festival-box .days {
+
+            font-size: 23px;
+
+            color: #b51e12;
+
+            font-weight: bold;
+
+            margin-bottom: 5px;
+        }
+
+
+        .festival-box p {
+
+            font-size: 18px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =========================
+           DETAILS
+        ========================= */
+
+        .details {
+
+            padding:
+                10px 40px;
+        }
+
+
+        .detail {
+
+            display: flex;
+
+            align-items: flex-start;
+
+            margin: 18px 0;
+
+            font-size: 18px;
+
+            line-height: 1.6;
+        }
+
+
+        .icon {
+
+            font-size: 28px;
+
+            margin-right: 14px;
+
+            min-width: 38px;
+        }
+
+
+        .detail strong {
+
+            color: #a51c10;
+        }
+
+
+        /* =========================
+           ADDRESS
+        ========================= */
+
+        .address {
+
+            text-align: center;
+
+            padding:
+                10px 30px 20px;
+        }
+
+
+        .address h3 {
+
+            color: #a51c10;
+
+            font-size: 27px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .address p {
+
+            font-size: 18px;
+
+            line-height: 1.8;
+        }
+
+
+        /* =========================
+           CLOSING
+        ========================= */
+
+        .closing {
+
+            text-align: center;
+
+            padding:
+                15px 25px 25px;
+        }
+
+
+        .closing h2 {
+
+            color: #b51e12;
+
+            font-size: 30px;
+        }
+
+
+        .closing p {
+
+            font-size: 18px;
+
+            margin-top: 7px;
+        }
+
+
+        .ganpati-name {
+
+            color: #a51c10;
+
+            font-size: 29px;
+
+            font-weight: bold;
+
+            margin-top: 12px;
+        }
+
+
+        /* =========================
+           BUTTONS
+        ========================= */
+
+        .buttons {
+
+            text-align: center;
+
+            padding:
+                5px 20px 35px;
+        }
+
+
+        button {
+
+            border: none;
+
+            border-radius: 35px;
+
+            padding:
+                13px 23px;
+
+            margin: 5px;
+
+            font-size: 16px;
+
+            font-family: inherit;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+
+        button:hover {
+
+            transform: scale(1.05);
+        }
+
+
+        .share-btn {
+
+            background: #25D366;
+
+            color: white;
+        }
+
+
+        .music-btn {
+
+            background: #a51c10;
+
+            color: white;
+        }
+
+
+        /* =========================
+           FALLING FLOWERS
+        ========================= */
+
+        .flower {
+
+            position: fixed;
+
+            top: -50px;
+
+            font-size: 25px;
+
+            animation:
+                fall linear forwards;
+
+            z-index: 20;
+
+            pointer-events: none;
+        }
+
+
+        @keyframes fall {
+
+            0% {
+
+                transform:
+                    translateY(-50px) rotate(0deg);
+            }
+
+            100% {
+
+                transform:
+                    translateY(110vh) rotate(360deg);
+            }
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            .welcome-title {
+
+                font-size: 37px;
+            }
+
+
+            .welcome-subtitle {
+
+                font-size: 20px;
+            }
+
+
+            .welcome-small {
+
+                font-size: 16px;
+            }
+
+
+            .welcome-om {
+
+                font-size: 65px;
+            }
+
+
+            .card {
+
+                width: 96%;
+
+                border-width: 5px;
+            }
+
+
+            .main-title {
+
+                font-size: 34px;
+            }
+
+
+            .subtitle {
+
+                font-size: 19px;
+            }
+
+
+            .ganpati-photo {
+
+                width: 92%;
+            }
+
+
+            .invitation {
+
+                padding:
+                    10px 20px;
+            }
+
+
+            .invitation h2 {
+
+                font-size: 25px;
+            }
+
+
+            .invitation p {
+
+                font-size: 17px;
+            }
+
+
+            .festival-box {
+
+                margin:
+                    20px 15px;
+            }
+
+
+            .details {
+
+                padding:
+                    10px 20px;
+            }
+
+
+            .detail {
+
+                font-size: 16px;
+            }
+
+
+            .address {
+
+                padding:
+                    10px 20px 20px;
+            }
+
+
+            .address p {
+
+                font-size: 16px;
+            }
+
+
+            .corner {
+
+                font-size: 30px;
+            }
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         WELCOME SCREEN
+    ========================================== -->
+
+    <div id="welcomeScreen">
+
+        <div class="welcome-om">
+            ॐ
+        </div>
+
+
+        <div class="welcome-small">
+            ॥ श्री गणेशाय नमः ॥
+        </div>
+
+
+        <div class="welcome-title">
+            राऊतांचा राजा
+        </div>
+
+
+        <div class="welcome-subtitle">
+            गणपती उत्सव २०२६
+        </div>
+
+
+        <button class="enter-button" onclick="enterInvitation()">
+
+            🪔 प्रवेश करा 🪔
+
+        </button>
+
+    </div>
+
+
+
+    <!-- =========================================
+         BACKGROUND MUSIC
+    ========================================== -->
+
+    <audio id="ganpatiMusic" loop>
+
+        <source src="ganpati-aale.mp3" type="audio/mpeg">
+
+    </audio>
+
+
+
+    <!-- =========================================
+         MAIN PAGE
+    ========================================== -->
+
+    <div class="page">
+
+
+        <div class="card">
+
+
+            <!-- Decorations -->
+
+            <div class="corner top-left">
+                🌺
+            </div>
+
+            <div class="corner top-right">
+                🌺
+            </div>
+
+            <div class="corner bottom-left">
+                🌸
+            </div>
+
+            <div class="corner bottom-right">
+                🌸
+            </div>
+
+
+
+            <!-- =================================
+                 HEADER
+            ================================== -->
+
+            <div class="header">
+
+                <div class="om">
+                    ॐ
+                </div>
+
+
+                <div class="small-title">
+                    ॥ श्री गणेशाय नमः ॥
+                </div>
+
+
+                <div class="main-title">
+                    राऊतांचा राजा
+                </div>
+
+
+                <div class="subtitle">
+                    गणपती उत्सव
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================
+                 GANPATI PHOTO
+            ================================== -->
+
+            <div class="ganpati-photo">
+
+                <img src="ganpati.jpeg" alt="गणपती बाप्पा">
+
+            </div>
+
+
+
+            <!-- Divider -->
+
+            <div class="divider">
+                🪷
+            </div>
+
+
+
+            <!-- =================================
+                 INVITATION MESSAGE
+            ================================== -->
+
+            <div class="invitation">
+
+                <h2>
+                    🌺 सस्नेह निमंत्रण 🌺
+                </h2>
+
+
+                <p>
+
+                    गणरायाच्या आगमनाने आपल्या घरात
+                    आनंद, उत्साह आणि मंगलमय वातावरण
+                    निर्माण होणार आहे.
+
+                </p>
+
+
+                <p style="margin-top: 10px;">
+
+                    या शुभप्रसंगी आपण आपल्या
+                    परिवारासह उपस्थित राहून
+                    <span class="highlight">
+                        गणरायाचे दर्शन
+                    </span>
+                    घ्यावे व आमचा आनंद द्विगुणित करावा,
+                    ही नम्र विनंती.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- =================================
+                 FESTIVAL BOX
+            ================================== -->
+
+            <div class="festival-box">
+
+                <h3>
+                    🙏 गणपती उत्सव 🙏
+                </h3>
+
+
+                <div class="days">
+                    पाच दिवसांचा गणपती उत्सव
+                </div>
+
+
+                <p>
+                    भक्ती • श्रद्धा • आनंद • उत्साह
+                </p>
+
+            </div>
+
+
+
+            <!-- =================================
+                 DETAILS
+            ================================== -->
+
+            <div class="details">
+
+
+                <div class="detail">
+
+                    <div class="icon">
+                        📅
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            उत्सव कालावधी
+                        </strong>
+
+                        <br>
+
+                        गणेश चतुर्थीपासून
+                        <span class="highlight">
+                            ५ दिवस
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="detail">
+
+                    <div class="icon">
+                        🙏
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            गणरायाचे नाव
+                        </strong>
+
+                        <br>
+
+                        राऊतांचा राजा
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="detail">
+
+                    <div class="icon">
+                        🪔
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            विशेष आकर्षण
+                        </strong>
+
+                        <br>
+
+                        गणरायाचे दर्शन व आरती
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================
+                 ADDRESS
+            ================================== -->
+
+            <div class="address">
+
+                <h3>
+                    📍 स्थळ
+                </h3>
+
+
+                <p>
+
+                    समाधान बिल्डिंग, २ रा मजला,
+
+                    <br>
+
+                    ठाणे रेल्वे स्टेशनच्या समोर,
+
+                    <br>
+
+                    गिरणार टी शॉपच्या वर,
+
+                    <br>
+
+                    ठाणे पश्चिम – ४००६०२
+
+                </p>
+
+            </div>
+
+
+
+            <!-- Divider -->
+
+            <div class="divider">
+                🌼
+            </div>
+
+
+
+            <!-- =================================
+                 CLOSING
+            ================================== -->
+
+            <div class="closing">
+
+                <h2>
+                    गणपती बाप्पा मोरया! 🙏
+                </h2>
+
+
+                <p>
+                    मंगलमूर्ती मोरया!
+                </p>
+
+
+                <div class="ganpati-name">
+                    ❤️ राऊतांचा राजा ❤️
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================
+                 BUTTONS
+            ================================== -->
+
+            <div class="buttons">
+
+
+                <button class="share-btn" onclick="shareInvitation()">
+
+                    📲 WhatsApp वर शेअर करा
+
+                </button>
+
+
+                <button class="music-btn" onclick="toggleMusic()">
+
+                    🎵 संगीत बंद / सुरू
+
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script>
+
+
+        /* =====================================
+           ENTER INVITATION
+        ====================================== */
+
+        function enterInvitation() {
+
+            const music =
+                document.getElementById(
+                    "ganpatiMusic"
+                );
+
+
+            /*
+             * Music starts after the user clicks.
+             * This works better because browsers
+             * normally block automatic sound.
+             */
+
+            music.play().catch(function (error) {
+
+                console.log(
+                    "Music could not start:",
+                    error
+                );
+
+            });
+
+
+            /*
+             * Hide welcome screen
+             */
+
+            document
+                .getElementById("welcomeScreen")
+                .classList.add("hide");
+
+
+            /*
+             * Start flowers
+             */
+
+            startFlowers();
+
+        }
+
+
+
+        /* =====================================
+           MUSIC ON / OFF
+        ====================================== */
+
+        function toggleMusic() {
+
+            const music =
+                document.getElementById(
+                    "ganpatiMusic"
+                );
+
+
+            if (music.paused) {
+
+                music.play();
+
+            }
+
+            else {
+
+                music.pause();
+
+            }
+
+        }
+
+
+
+        /* =====================================
+           WHATSAPP SHARE
+        ====================================== */
+
+        function shareInvitation() {
+
+            const message =
+
+                "🙏 राऊतांचा राजा गणपती उत्सव 🙏\n\n" +
+
+                "🌺 सस्नेह निमंत्रण 🌺\n\n" +
+
+                "पाच दिवसांच्या गणपती उत्सवानिमित्त " +
+
+                "आपण आपल्या परिवारासह उपस्थित राहून " +
+
+                "गणरायाचे दर्शन घ्यावे, " +
+
+                "ही नम्र विनंती.\n\n" +
+
+                "📍 समाधान बिल्डिंग, २ रा मजला,\n" +
+
+                "ठाणे रेल्वे स्टेशनच्या समोर,\n" +
+
+                "गिरणार टी शॉपच्या वर,\n" +
+
+                "ठाणे पश्चिम – ४००६०२\n\n" +
+
+                "🙏 गणपती बाप्पा मोरया! 🙏";
+
+
+            const url =
+
+                "https://wa.me/?text=" +
+
+                encodeURIComponent(message);
+
+
+            window.open(
+                url,
+                "_blank"
+            );
+
+        }
+
+
+
+        /* =====================================
+           FALLING FLOWERS
+        ====================================== */
+
+        const flowers = [
+
+            "🌸",
+            "🌺",
+            "🌼",
+            "🪷",
+            "✨",
+            "🌹"
+
+        ];
+
+
+        function createFlower() {
+
+            const flower =
+                document.createElement("div");
+
+
+            flower.classList.add(
+                "flower"
+            );
+
+
+            flower.innerHTML =
+
+                flowers[
+                Math.floor(
+                    Math.random()
+                    * flowers.length
+                )
+                ];
+
+
+            flower.style.left =
+
+                Math.random() * 100
+                + "vw";
+
+
+            flower.style.animationDuration =
+
+                (5 + Math.random() * 6)
+                + "s";
+
+
+            flower.style.opacity =
+
+                0.5 +
+                Math.random() * 0.5;
+
+
+            document.body.appendChild(
+                flower
+            );
+
+
+            setTimeout(
+                function () {
+
+                    flower.remove();
+
+                },
+                12000
+            );
+
+        }
+
+
+
+        function startFlowers() {
+
+            setInterval(
+                createFlower,
+                700
+            );
+
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>
